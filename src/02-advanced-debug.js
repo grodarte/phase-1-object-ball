@@ -26,3 +26,21 @@ function goodPractices() {
 
 // then, call the function so it runs!
 goodPractices()
+
+function numPointsScored(playerName){
+  const homePlayers = gameObject().home.players;
+  for(let player in homePlayers){
+    if (player === playerName) {
+      return homePlayers[playerName].points
+    }
+  }
+  debugger
+  const awayPlayers = gameObject().away.players;
+  for(let player in awayPlayers){
+    if (player === playerName) {
+      return awayPlayers[playerName].points
+    }
+  }
+  debugger
+  return `Player not found`;
+}
